@@ -412,6 +412,10 @@ main { position: relative; z-index: 1; min-height: 100svh; }
 
 /* ============ Responsive ============ */
 @media (max-width: 1060px) {
+  .nav__links a { padding: 9px 10px; font-size: 0.82rem; }
+  .nav__logo { width: 36px; height: 36px; font-size: 0.88rem; }
+}
+@media (max-width: 640px) {
   .nav { left: 14px; right: 14px; transform: none; justify-content: space-between; }
   .nav__links { display: none; }
   .nav__burger { display: grid; }
