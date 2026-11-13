@@ -1,7 +1,7 @@
 Rishabh Prajapati
 Web Developer · AI Enthusiast · Cybersecurity Explorer
 
-Welcome to my personal portfolio repository. I build modern web experiences and exre Artificial Intelligence, Cybersecurity, and Software Development.
+Welcome to my personal portfolio repository. I build modern web experiences and explore Artificial Intelligence, Cybersecurity, and Software Development.
 
 🚀 Portfolio
 
