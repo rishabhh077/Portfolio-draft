@@ -21,12 +21,12 @@
     email: "rishabhprajapati2606@gmail.com",
     phone: "+919990448155",
     phoneLabel: "+91 99904 48155",
-    location: "India",
-    linkedin: "https://linkedin.com/in/rishabh-prajapati-6440b8364",
-    linkedinLabel: "linkedin.com/in/rishabh-prajapati-6440b8364",
+    location: "South Delhi, India",
+    linkedin: "https://www.linkedin.com/in/rishabhh077",
+    linkedinLabel: "linkedin.com/in/rishabhh077",
     github: "https://github.com/rishabhh077",
     githubLabel: "github.com/rishabhh077",
-    live: "https://rishabhh077.github.io/Portfolio-Test/"
+    live: "https://rishabhh077.github.io/Portfolio-draft/"
   };
   var NAV = [
     { path: "/", label: "Home", key: "home" },
@@ -45,80 +45,143 @@
   };
   var PROJECTS = [
     {
-      slug: "misa-chatbot",
+      slug: "phishing-website-detection",
       n: "01",
-      title: "MISA Chatbot",
+      title: "Phishing Website Detection",
       accent: "violet",
-      blurb: "Rule-based and AI-powered chatbot built in Python.",
-      overview: "MISA is a chatbot that combines a rule-based approach with AI. It is built in Python and organized around conversational flows.",
-      tech: ["Python"],
-      facts: ["Built in Python", "Rule-based logic combined with AI-powered responses", "Designed around conversational flows"],
-      alt: "Abstract illustration: chat bubbles feeding a rules and AI flow"
+      vis: "scan",
+      blurb: "A machine-learning tool that flags phishing websites from their URLs, at about 91% accuracy.",
+      overview: "A machine-learning tool that detects phishing websites by analyzing their URLs. I trained and tested it on over 400,000 real URLs and shipped it both as a live Streamlit web app and as a command-line tool.",
+      tech: ["Python", "scikit-learn", "Streamlit"],
+      facts: ["Classifies a website as phishing or legitimate from its URL", "Trained and tested on 400,000+ real URLs", "About 91% accuracy", "Shipped as a Streamlit web app and a CLI"],
+      github: "https://github.com/rishabhh077/phishing-website-detection",
+      live: "https://rishabhh-phishing.streamlit.app",
+      liveLabel: "Live demo",
+      alt: "Illustration: a list of URLs being scanned and flagged, with an accuracy gauge"
     },
     {
-      slug: "portfolio-website",
+      slug: "password-vault",
       n: "02",
-      title: "Portfolio Website",
-      accent: "cyan",
-      blurb: "A responsive personal website to showcase skills, projects, and contact details.",
-      overview: "A responsive personal website built with HTML, CSS and JavaScript. It brings together my skills, projects and contact details in one place.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      facts: ["Responsive layout", "Shows skills, projects and contact details", "Built with HTML, CSS and JavaScript"],
-      live: SITE.live,
-      liveLabel: "Original portfolio, live",
-      alt: "Abstract illustration of a responsive website layout"
+      title: "Password Vault",
+      accent: "green",
+      vis: "vault",
+      blurb: "A client-side password manager that encrypts credentials with AES-256-GCM in the browser.",
+      overview: "A password manager that runs entirely in the browser. Credentials are encrypted with AES-256-GCM using a key derived from the master password with PBKDF2, so nothing readable ever leaves the device.",
+      tech: ["JavaScript", "Web Crypto API"],
+      facts: ["AES-256-GCM encryption with PBKDF2 key derivation (600K iterations)", "Key wrapping with a recovery key", "5-minute auto-lock", "Cryptographically secure password generator"],
+      github: "https://github.com/rishabhh077/password_manager",
+      live: "https://rishabhh077.github.io/password_manager/",
+      liveLabel: "Live demo",
+      alt: "Illustration: a padlock beside a list of masked saved passwords"
     },
     {
-      slug: "task-manager-app",
+      slug: "password-strength-analyzer",
       n: "03",
-      title: "Task Manager App",
+      title: "Password Strength Analyzer & Breach Checker",
+      accent: "cyan",
+      vis: "meter",
+      blurb: "Scores passwords 0 to 100 in real time and checks whether they appear in known data breaches.",
+      overview: "A real-time password analyzer that scores passwords from 0 to 100 by effective entropy instead of simple rules. It also checks, without ever sending the password, whether it has appeared in known data breaches.",
+      tech: ["JavaScript", "Web Crypto API", "HIBP API"],
+      facts: ["Real-time 0 to 100 score based on effective entropy", "Detects sequences, leetspeak and personal details", "Privacy-safe breach check against Have I Been Pwned"],
+      github: "https://github.com/rishabhh077/password_strength_analyzer_breach",
+      live: "https://rishabhh077.github.io/password_strength_analyzer_breach/",
+      liveLabel: "Live demo",
+      alt: "Illustration: a masked password field above a strength meter and checklist"
+    },
+    {
+      slug: "college-query-chatbot",
+      n: "04",
+      title: "College Query Chatbot (RAG)",
+      accent: "violet",
+      vis: "rag",
+      blurb: "A RAG chatbot that answers student questions from LIET website documents and cites its sources.",
+      overview: "A retrieval-augmented chatbot for students at LIET. It answers questions using the college's own website documents and cites the sources behind every answer, so replies stay grounded instead of made up.",
+      tech: ["Python", "Gemini API", "NumPy", "Streamlit"],
+      facts: ["Answers student questions from LIET website documents", "Cites sources in each answer", "Document chunking and Gemini embeddings", "NumPy cosine-similarity retrieval and grounded answer generation"],
+      github: "https://github.com/rishabhh077/college-chatbot",
+      live: "https://liet-chatbot.streamlit.app",
+      liveLabel: "Live demo",
+      alt: "Illustration: documents flowing through an embedding step into a cited chat answer"
+    },
+    {
+      slug: "bluenexus",
+      n: "05",
+      title: "BlueNexus, Smart India Hackathon 2026",
       accent: "blue",
-      blurb: "A productivity app to create, update, and track tasks with a clean UI.",
-      overview: "A productivity app for creating, updating and tracking tasks, designed around a clean interface.",
-      tech: [],
-      facts: ["Create tasks", "Update tasks", "Track tasks", "Clean UI"],
-      alt: "Abstract illustration of a task list with checked items"
+      vis: "globe",
+      blurb: "Team project: a 3D platform that visualizes real INCOIS ocean data and Argo float observations.",
+      overview: "A team project for Smart India Hackathon 2026. BlueNexus is a 3D platform that visualizes real ocean data from INCOIS, including Argo float and glider observations. I built the frontend and contributed to the FastAPI backend.",
+      tech: ["React", "TypeScript", "Three.js", "FastAPI"],
+      facts: ["Built the 3D frontend in React, TypeScript and Three.js", "Visualizes real INCOIS ocean data and Argo float/glider observations", "Contributed to the FastAPI REST backend and design", "Deployed on Vercel"],
+      github: "https://github.com/rishabhh077/BlueNexus-SIH-2026",
+      live: "https://bluenexus-sih-2026.vercel.app",
+      liveLabel: "Live demo",
+      alt: "Illustration: a wireframe globe with ocean data points and wave lines"
+    },
+    {
+      slug: "wordlist-generator",
+      n: "06",
+      title: "Wordlist Generator (Word Pattern Lab)",
+      accent: "green",
+      vis: "list",
+      blurb: "A browser tool that generates password-pattern variations for password-awareness training.",
+      overview: "A browser tool that takes a base word and generates the predictable variations people often use as passwords. It is built for password-awareness training, to show how quickly a 'clever' password can be guessed.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      facts: ["Generates password-pattern variations from a base word", "Built for password-awareness training", "Exports the list as a .txt file", "Runs fully in the browser"],
+      github: "https://github.com/rishabhh077/wordlist_generator_tool",
+      live: "https://rishabhh077.github.io/wordlist_generator_tool/",
+      liveLabel: "Live demo",
+      alt: "Illustration: a base word expanding into a list of pattern variations"
     }
   ];
   var SKILL_GROUPS = {
-    web: "Front end",
-    backend: "Python & back end",
-    ai: "AI",
+    web: "Web",
+    backend: "Languages & tools",
+    ai: "AI & ML",
     security: "Security"
   };
   var SKILLS = [
-    { name: "HTML", group: "web", desc: "The base of my web work, used to build the Portfolio Website." },
-    { name: "CSS", group: "web", desc: "Styling and responsive layout, used in the Portfolio Website." },
-    { name: "JavaScript", group: "web", desc: "Front-end interactivity, used in the Portfolio Website." },
-    { name: "Node.js", group: "backend", desc: "Server-side JavaScript. Part of my back-end skill set." },
-    { name: "Express", group: "backend", desc: "Web framework for Node.js. Part of my back-end skill set." },
-    { name: "Python", group: "backend", desc: "Used to build the MISA Chatbot." },
-    { name: "Django", group: "backend", desc: "Python web framework. Part of my back-end skill set." },
-    { name: "Flask", group: "backend", desc: "Python micro-framework. Part of my back-end skill set." },
-    { name: "AI", group: "ai", desc: "Experiments with rule-based and AI-powered conversation in MISA. AI Aware and AI Appreciate certificates, 2025." },
-    { name: "Cybersecurity", group: "security", desc: "My B.Tech specialization. Also a Cybersecurity Analyst Job Simulation and Ethical Hacking by Unstop." },
-    { name: "AppSec", group: "security", desc: "Certified AppSec Practitioner, 15 Oct 2025." },
-    { name: "Cloud", group: "security", desc: "Certified Cloud Security Practitioner (AWS), 15 Oct 2025." }
+    { name: "HTML/CSS", group: "web", desc: "Used across my browser tools, including the Wordlist Generator and this portfolio." },
+    { name: "JavaScript", group: "web", desc: "Powers the Password Vault, the Password Strength Analyzer and the Wordlist Generator." },
+    { name: "TypeScript", group: "web", desc: "Used with React for the BlueNexus frontend at Smart India Hackathon 2026." },
+    { name: "React", group: "web", desc: "Built the BlueNexus frontend, a 3D ocean-data platform." },
+    { name: "Three.js", group: "web", desc: "3D visualization of ocean data in BlueNexus, and the 3D scenes on this site." },
+    { name: "Python", group: "backend", desc: "My main language for ML and AI: the Phishing Website Detection tool and the RAG chatbot." },
+    { name: "C", group: "backend", desc: "Part of my B.Tech coursework and programming foundations." },
+    { name: "SQL (MySQL)", group: "backend", desc: "Relational databases and queries with MySQL (basic)." },
+    { name: "FastAPI", group: "backend", desc: "Contributed to the FastAPI REST backend for BlueNexus." },
+    { name: "Git & Linux", group: "backend", desc: "Everyday tools for version control and working on the command line (basic)." },
+    { name: "scikit-learn", group: "ai", desc: "Trained the phishing URL classifier on 400,000+ URLs, reaching about 91% accuracy." },
+    { name: "RAG & Gemini", group: "ai", desc: "Chunking, Gemini embeddings and cosine-similarity retrieval in the College Query Chatbot." },
+    { name: "Streamlit", group: "ai", desc: "Deployed the phishing detector and the college chatbot as live web apps." },
+    { name: "Cryptography", group: "security", desc: "AES-GCM, PBKDF2 and SHA hashing, applied in the Password Vault and the breach checker." },
+    { name: "Phishing detection", group: "security", desc: "Built an ML phishing detector, plus the Mastercard phishing job simulation." },
+    { name: "Nmap", group: "security", desc: "Network scanning and reconnaissance basics." },
+    { name: "IAM", group: "security", desc: "Identity and access management fundamentals, from the Tata IAM job simulation." },
+    { name: "AppSec & Cloud", group: "security", desc: "Certified AppSec, Network Security and Cloud Security (AWS) Practitioner, The SecOps Group, Oct 2025." }
   ];
   var FEATURED = [
+    { year: "2026", role: "Cyber Security Analyst Intern", org: "Thiranex, remote, Jul to Aug 2026" },
+    { year: "2026", role: "Ethical Hacking & Cybersecurity Intern", org: "VaultofCodes, via the AICTE National Internship Portal" },
     { year: "2025", role: "Tech Contributor", org: "GirlScript Summer of Code (GSSoC) 2025" },
-    { year: "2025", role: "Web Development", org: "Apna College" },
-    { year: "2025", role: "Super Contributor", org: "Hacktoberfest 2025" }
+    { year: "2025", role: "Super Contributor", org: "Hacktoberfest 2025 (DigitalOcean)" }
   ];
   var ARCHIVE = [
     { year: "2026", items: [
-      { d: "13 Aug 2026", t: "Ethical Hacking by Unstop", k: "Security" },
-      { d: "08 Aug 2026", t: "MongoDB Basics", k: "Database" },
-      { d: "04 Jun 2026", t: "Cybersecurity Analyst Job Simulation", k: "Simulation" },
-      { d: "04 Jun 2026", t: "EY Technology Risk Virtual Job Simulation", k: "Simulation" },
-      { d: "04 Jun 2026", t: "Robotics and Controls Job Simulation", k: "Simulation" }
+      { d: "Aug 2026", t: "Ethical Hacking with AI, Unstop", k: "Course" },
+      { d: "Aug 2026", t: "MongoDB Basics", k: "Database" },
+      { d: "Jun to Jul 2026", t: "Cybersecurity Job Simulation, Tata (IAM), via Forage", k: "Simulation" },
+      { d: "Jun to Jul 2026", t: "Cybersecurity Job Simulation, Mastercard (Phishing), via Forage", k: "Simulation" },
+      { d: "Jun to Jul 2026", t: "Cyber Job Simulation, Deloitte, via Forage", k: "Simulation" },
+      { d: "Jun 2026", t: "Technology Risk Virtual Job Simulation, EY", k: "Simulation" }
     ] },
     { year: "2025", items: [
-      { d: "15 Oct 2025", t: "Certified AppSec Practitioner", k: "Security" },
-      { d: "15 Oct 2025", t: "Certified Cloud Security Practitioner (AWS)", k: "Security" },
-      { d: "15 Oct 2025", t: "Certified Network Security Practitioner", k: "Security" },
-      { d: "31 Jul 2025", t: "AI Appreciate 2025", k: "AI" },
-      { d: "31 Jul 2025", t: "AI Aware 2025", k: "AI" }
+      { d: "Oct 2025", t: "Certified AppSec Practitioner (CAP), The SecOps Group", k: "Security" },
+      { d: "Oct 2025", t: "Certified Network Security Practitioner (CNSP), The SecOps Group", k: "Security" },
+      { d: "Oct 2025", t: "Certified Cloud Security Practitioner, AWS (CCSP-AWS), The SecOps Group", k: "Security" },
+      { d: "Jul 2025", t: "AI Appreciate 2025", k: "AI" },
+      { d: "Jul 2025", t: "AI Aware 2025", k: "AI" }
     ] }
   ];
   var ORBIT = {
@@ -127,24 +190,24 @@
       title: "Web",
       color: 4448511,
       css: "cyan",
-      text: "HTML, CSS and JavaScript on the front end. Python, Django, Flask, Node.js and Express behind it. My Portfolio Website is built this way."
+      text: "Browser tools built with JavaScript and the Web Crypto API, like the Password Vault and the breach checker, plus a React and Three.js frontend for BlueNexus."
     },
     ai: {
       label: "AI",
       title: "AI",
       color: 10120191,
       css: "violet",
-      text: "MISA is a rule-based and AI-powered chatbot built in Python. I also hold the AI Aware and AI Appreciate 2025 certificates."
+      text: "A phishing URL classifier trained on 400,000+ URLs with scikit-learn, and a RAG chatbot that answers from real documents using Gemini embeddings."
     },
     sec: {
       label: "SECURITY",
       title: "Security",
       color: 4059812,
       css: "green",
-      text: "A B.Tech specialization in Cybersecurity, with AppSec, cloud security (AWS) and network security certifications, plus ethical hacking."
+      text: "My B.Tech specialization. Two cybersecurity internships, SecOps Group AppSec, network and cloud certifications, and job simulations with Tata, Mastercard, Deloitte and EY."
     }
   };
-  var ROLES = ["Web Developer", "Python Programmer", "AI Enthusiast", "Cybersecurity Analyst"];
+  var ROLES = ["Cybersecurity Student", "Security Tool Builder", "Python & ML Developer", "Web Developer"];
 
   // ../../home/claude/repo/js/reveal.js
   function splitWords(el) {
@@ -787,6 +850,7 @@
         if (raf) return;
         raf = requestAnimationFrame(() => {
           raf = 0;
+          if (!ev) return;
           const r = el.getBoundingClientRect();
           const dx = ev.clientX - (r.left + r.width / 2), dy = ev.clientY - (r.top + r.height / 2);
           el.style.transform = `translate3d(${(dx * s).toFixed(1)}px,${(dy * s).toFixed(1)}px,0)`;
@@ -892,61 +956,144 @@
   function preview(slug) {
     const p = PROJECTS.find((x) => x.slug === slug);
     const head = `<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(p.alt)}" focusable="false"><rect class="pv-bg" x=".5" y=".5" width="639" height="479" rx="20"/>`;
+    const ck = (x, y) => `<path class="pv-ck" d="M${x - 7} ${y} l5 5 l9 -11"/>`;
+    const xx = (x, y) => `<path class="pv-ck" d="M${x - 6} ${y - 6} l12 12 M${x + 6} ${y - 6} l-12 12"/>`;
     let b = "";
-    if (slug === "misa-chatbot") {
-      b = `
-    <g class="pv-m">
-      <rect class="pv-o" x="40" y="44" width="230" height="56" rx="18"/>
-      <rect class="pv-bar" x="60" y="64" width="150" height="6" rx="3"/><rect class="pv-bar" x="60" y="78" width="96" height="6" rx="3"/>
-      <rect class="pv-o pv-fill" x="120" y="122" width="262" height="72" rx="18"/>
-      <rect class="pv-bar pv-hl" x="142" y="142" width="190" height="6" rx="3"/><rect class="pv-bar" x="142" y="156" width="150" height="6" rx="3"/><rect class="pv-bar" x="142" y="170" width="104" height="6" rx="3"/>
-      <rect class="pv-o" x="40" y="216" width="190" height="56" rx="18"/>
-      <rect class="pv-bar" x="60" y="236" width="120" height="6" rx="3"/><rect class="pv-bar" x="60" y="250" width="80" height="6" rx="3"/>
-      <rect class="pv-o pv-fill" x="120" y="294" width="280" height="72" rx="18"/>
-      <rect class="pv-bar pv-hl" x="142" y="314" width="210" height="6" rx="3"/><rect class="pv-bar" x="142" y="328" width="170" height="6" rx="3"/><rect class="pv-bar" x="142" y="342" width="120" height="6" rx="3"/>
-      <rect class="pv-o" x="40" y="388" width="84" height="40" rx="20"/>
-      <circle class="pv-bar pv-hl" cx="66" cy="408" r="4"/><circle class="pv-bar" cx="82" cy="408" r="4"/><circle class="pv-bar" cx="98" cy="408" r="4"/>
-    </g>
-    <g class="pv-r">
-      <path class="pv-l pv-d" d="M382 158 C440 158 440 96 490 96"/>
-      <path class="pv-l pv-d" d="M400 330 C450 330 450 368 490 368"/>
-      <line class="pv-l" x1="524" y1="124" x2="524" y2="204"/><line class="pv-l" x1="524" y1="260" x2="524" y2="340"/>
-      <circle class="pv-o pv-fill" cx="524" cy="96" r="28"/><circle class="pv-o pv-fill" cx="524" cy="232" r="28"/><circle class="pv-o" cx="524" cy="368" r="28"/>
-      <text class="pv-t" x="524" y="144" text-anchor="middle">RULES</text>
-      <text class="pv-t" x="524" y="280" text-anchor="middle">AI</text>
-    </g>`;
-    } else if (slug === "portfolio-website") {
-      b = `
-    <rect class="pv-o" x="40" y="40" width="560" height="400" rx="14"/>
-    <line class="pv-l" x1="40" y1="80" x2="600" y2="80"/>
-    <circle class="pv-bar pv-hl" cx="64" cy="60" r="5"/><circle class="pv-bar" cx="84" cy="60" r="5"/><circle class="pv-bar" cx="104" cy="60" r="5"/>
-    <rect class="pv-bar" x="400" y="56" width="40" height="8" rx="4"/><rect class="pv-bar" x="456" y="56" width="40" height="8" rx="4"/><rect class="pv-bar" x="512" y="56" width="56" height="8" rx="4"/>
-    <g class="pv-m">
-      <rect class="pv-bar pv-hl" x="72" y="118" width="320" height="24" rx="7"/>
-      <rect class="pv-bar pv-hl" x="72" y="152" width="230" height="24" rx="7"/>
-      <rect class="pv-bar" x="72" y="196" width="270" height="7" rx="3.5"/><rect class="pv-bar" x="72" y="212" width="210" height="7" rx="3.5"/>
-      <rect class="pv-o pv-fill" x="72" y="240" width="112" height="34" rx="17"/><rect class="pv-o" x="196" y="240" width="96" height="34" rx="17"/>
-    </g>
-    <g class="pv-r">
-      <rect class="pv-o" x="72" y="316" width="152" height="96" rx="12"/><rect class="pv-o pv-fill" x="244" y="316" width="152" height="96" rx="12"/><rect class="pv-o" x="416" y="316" width="152" height="96" rx="12"/>
-      <rect class="pv-bar" x="88" y="332" width="70" height="7" rx="3.5"/><rect class="pv-bar" x="260" y="332" width="70" height="7" rx="3.5"/><rect class="pv-bar" x="432" y="332" width="70" height="7" rx="3.5"/>
-    </g>
-    <rect class="pv-o" x="440" y="116" width="128" height="104" rx="12"/><circle class="pv-o" cx="504" cy="168" r="26"/>`;
-    } else {
-      const widths = [210, 150, 240, 170, 120];
+    if (p.vis === "scan") {
       let rows = "";
-      widths.forEach((w, i) => {
-        const y = 108 + i * 66, done = i < 2;
-        rows += `<rect class="pv-o${done ? " pv-fill" : ""}" x="48" y="${y}" width="400" height="50" rx="12"/>
-      <rect class="pv-o" x="66" y="${y + 14}" width="22" height="22" rx="6"/>
-      ${done ? `<path class="pv-ck" d="M71 ${y + 26} l5 5 l9 -11"/>` : ""}
-      <rect class="pv-bar${done ? "" : " pv-hl"}" x="106" y="${y + 21}" width="${w}" height="8" rx="4"/>`;
+      [[260, 0], [200, 1], [290, 0], [170, 1], [230, 0]].forEach(([w, bad], i) => {
+        const y = 128 + i * 62;
+        rows += `<rect class="pv-o${bad ? " pv-fill" : ""}" x="40" y="${y}" width="380" height="46" rx="12"/>
+      <rect class="pv-bar${bad ? " pv-hl" : ""}" x="62" y="${y + 19}" width="${w}" height="8" rx="4"/>
+      ${bad ? xx(394, y + 23) : ck(394, y + 23)}`;
       });
       b = `
-    <rect class="pv-bar pv-hl" x="48" y="44" width="190" height="22" rx="7"/>
-    <rect class="pv-o" x="440" y="36" width="152" height="38" rx="19"/><line class="pv-l" x1="500" y1="55" x2="532" y2="55"/><line class="pv-l" x1="516" y1="39" x2="516" y2="71"/>
+    <rect class="pv-o" x="40" y="40" width="560" height="52" rx="26"/>
+    <circle class="pv-o" cx="72" cy="64" r="10"/><line class="pv-l" x1="79" y1="71" x2="88" y2="80"/>
+    <rect class="pv-bar pv-hl" x="104" y="62" width="300" height="8" rx="4"/>
     <g class="pv-m">${rows}</g>
-    <g class="pv-r"><rect class="pv-o" x="520" y="108" width="16" height="310" rx="8"/><rect class="pv-fill pv-hl" x="520" y="268" width="16" height="150" rx="8"/><circle class="pv-o pv-fill" cx="528" cy="268" r="14"/></g>`;
+    <g class="pv-r">
+      <circle class="pv-o" cx="524" cy="270" r="62"/>
+      <circle class="pv-ck" cx="524" cy="270" r="62" stroke-dasharray="354 390" transform="rotate(-90 524 270)"/>
+      <text class="pv-t" x="524" y="278" text-anchor="middle" style="font-size:26px">91%</text>
+      <text class="pv-t" x="524" y="362" text-anchor="middle">ACCURACY</text>
+    </g>`;
+    } else if (p.vis === "vault") {
+      let rows = "";
+      [150, 110, 180, 130].forEach((w, i) => {
+        const y = 112 + i * 72;
+        let dots = "";
+        for (let k = 0; k < 8; k++) dots += `<circle class="pv-bar${i === 0 ? " pv-hl" : ""}" cx="${432 + k * 18}" cy="${y + 36}" r="4"/>`;
+        rows += `<rect class="pv-o${i === 0 ? " pv-fill" : ""}" x="270" y="${y}" width="330" height="56" rx="14"/>
+      <circle class="pv-o" cx="300" cy="${y + 28}" r="12"/>
+      <rect class="pv-bar pv-hl" x="324" y="${y + 14}" width="${w * 0.6}" height="7" rx="3.5"/>${dots}`;
+      });
+      b = `
+    <g class="pv-m">
+      <path class="pv-l" d="M100 210 v-46 a45 45 0 0 1 90 0 v46" style="stroke-width:6;stroke-opacity:.6"/>
+      <rect class="pv-o pv-fill" x="70" y="210" width="150" height="130" rx="18"/>
+      <circle class="pv-bar pv-hl" cx="145" cy="262" r="14"/><rect class="pv-bar pv-hl" x="140" y="268" width="10" height="34" rx="5"/>
+      <text class="pv-t" x="145" y="384" text-anchor="middle">AES-256-GCM</text>
+      <text class="pv-t" x="145" y="406" text-anchor="middle" style="opacity:.6">AUTO-LOCK 5:00</text>
+    </g>
+    <g class="pv-r">${rows}</g>`;
+    } else if (p.vis === "meter") {
+      let segs = "", checks = "";
+      for (let k = 0; k < 5; k++) segs += `<rect class="pv-bar${k < 4 ? " pv-hl" : ""}" x="${40 + k * 108}" y="140" width="96" height="12" rx="6"/>`;
+      [[220, 1], [170, 1], [250, 0], [190, 1]].forEach(([w, ok], i) => {
+        const y = 230 + i * 50;
+        checks += `${ok ? ck(60, y) : xx(60, y)}<rect class="pv-bar" x="86" y="${y - 4}" width="${w}" height="8" rx="4"/>`;
+      });
+      let dots = "";
+      for (let k = 0; k < 12; k++) dots += `<circle class="pv-bar pv-hl" cx="${76 + k * 22}" cy="76" r="5"/>`;
+      b = `
+    <rect class="pv-o" x="40" y="44" width="560" height="64" rx="16"/>${dots}
+    <path class="pv-l" d="M540 76 q22 -18 44 0 q-22 18 -44 0"/><circle class="pv-bar pv-hl" cx="562" cy="76" r="5"/>
+    ${segs}
+    <text class="pv-t" x="40" y="190">STRENGTH</text><text class="pv-t" x="600" y="190" text-anchor="end" style="font-size:18px">84 / 100</text>
+    <g class="pv-m">${checks}</g>
+    <g class="pv-r">
+      <path class="pv-o pv-fill" d="M500 228 l72 26 v58 c0 46 -32 72 -72 88 c-40 -16 -72 -42 -72 -88 v-58 z"/>
+      ${ck(500, 318)}
+      <text class="pv-t" x="500" y="440" text-anchor="middle">NOT IN BREACHES</text>
+    </g>`;
+    } else if (p.vis === "rag") {
+      b = `
+    <g class="pv-m">
+      <rect class="pv-o" x="56" y="92" width="130" height="170" rx="12"/>
+      <rect class="pv-o" x="48" y="84" width="130" height="170" rx="12" style="fill:var(--bg,#06070b)"/>
+      <rect class="pv-o pv-fill" x="40" y="76" width="130" height="170" rx="12"/>
+      <rect class="pv-bar pv-hl" x="60" y="100" width="70" height="7" rx="3.5"/>
+      <rect class="pv-bar" x="60" y="122" width="90" height="6" rx="3"/><rect class="pv-bar" x="60" y="138" width="80" height="6" rx="3"/><rect class="pv-bar" x="60" y="154" width="90" height="6" rx="3"/><rect class="pv-bar" x="60" y="170" width="60" height="6" rx="3"/>
+      <text class="pv-t" x="105" y="290" text-anchor="middle">DOCS</text>
+      <path class="pv-l pv-d" d="M186 170 C220 170 220 232 246 232"/>
+      <circle class="pv-o pv-fill" cx="276" cy="232" r="30"/>
+      <circle class="pv-bar pv-hl" cx="266" cy="224" r="4"/><circle class="pv-bar" cx="284" cy="226" r="4"/><circle class="pv-bar" cx="274" cy="242" r="4"/><circle class="pv-bar pv-hl" cx="288" cy="240" r="3"/>
+      <text class="pv-t" x="276" y="290" text-anchor="middle">EMBED</text>
+      <path class="pv-l pv-d" d="M306 232 C330 232 330 170 352 170"/>
+    </g>
+    <g class="pv-r">
+      <rect class="pv-o" x="412" y="64" width="188" height="50" rx="16"/>
+      <rect class="pv-bar" x="430" y="84" width="130" height="7" rx="3.5"/>
+      <rect class="pv-o pv-fill" x="352" y="132" width="248" height="120" rx="16"/>
+      <rect class="pv-bar pv-hl" x="372" y="154" width="190" height="7" rx="3.5"/><rect class="pv-bar" x="372" y="170" width="200" height="7" rx="3.5"/><rect class="pv-bar" x="372" y="186" width="150" height="7" rx="3.5"/>
+      <rect class="pv-o" x="372" y="210" width="44" height="24" rx="12"/><text class="pv-t" x="394" y="226" text-anchor="middle">[1]</text>
+      <rect class="pv-o" x="424" y="210" width="44" height="24" rx="12"/><text class="pv-t" x="446" y="226" text-anchor="middle">[2]</text>
+      <rect class="pv-o" x="412" y="272" width="188" height="50" rx="16"/>
+      <rect class="pv-bar" x="430" y="292" width="110" height="7" rx="3.5"/>
+      <rect class="pv-o" x="40" y="380" width="560" height="56" rx="28"/>
+      <rect class="pv-bar" x="68" y="404" width="220" height="8" rx="4"/>
+      <circle class="pv-o pv-fill" cx="568" cy="408" r="16"/>
+    </g>`;
+    } else if (p.vis === "globe") {
+      let pts = "";
+      [[180, 170, 1], [262, 150, 0], [300, 230, 1], [210, 262, 0], [150, 300, 1], [290, 320, 0], [236, 206, 1]].forEach(([x, y, h]) => {
+        pts += `<circle class="pv-bar${h ? " pv-hl" : ""}" cx="${x}" cy="${y}" r="${h ? 6 : 4}"/>`;
+      });
+      let bars = "";
+      [60, 96, 74, 120, 88, 140, 104].forEach((h, i) => {
+        bars += `<rect class="pv-bar${i === 5 ? " pv-hl" : ""}" x="${448 + i * 20}" y="${300 - h}" width="12" height="${h}" rx="3"/>`;
+      });
+      b = `
+    <g class="pv-m">
+      <circle class="pv-o pv-fill" cx="226" cy="240" r="150"/>
+      <ellipse class="pv-l" cx="226" cy="240" rx="150" ry="52"/>
+      <ellipse class="pv-l" cx="226" cy="240" rx="150" ry="110"/>
+      <ellipse class="pv-l" cx="226" cy="240" rx="56" ry="150"/>
+      <ellipse class="pv-l" cx="226" cy="240" rx="112" ry="150"/>
+      ${pts}
+    </g>
+    <g class="pv-r">
+      <rect class="pv-o" x="428" y="120" width="172" height="200" rx="14"/>
+      <rect class="pv-bar pv-hl" x="448" y="140" width="80" height="7" rx="3.5"/>
+      ${bars}
+      <text class="pv-t" x="514" y="350" text-anchor="middle">ARGO FLOATS</text>
+    </g>
+    <path class="pv-l" d="M40 420 q40 -22 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/>
+    <path class="pv-l pv-d" d="M40 444 q40 -18 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/>`;
+    } else {
+      const words = ["rishabh", "Rishabh2026", "r1shabh!", "RISHABH@123", "rishabh_26", "Rish@bh", "hbahsir"];
+      let rows = "";
+      words.forEach((w, i) => {
+        const y = 150 + i * 40;
+        rows += `<rect class="pv-o${i === 0 ? " pv-fill" : ""}" x="330" y="${y}" width="270" height="30" rx="8"/>
+      <text class="pv-t" x="348" y="${y + 20}">${w}</text>`;
+      });
+      b = `
+    <g class="pv-m">
+      <rect class="pv-o pv-fill" x="40" y="150" width="210" height="56" rx="14"/>
+      <text class="pv-t" x="62" y="184" style="font-size:16px">rishabh</text>
+      <text class="pv-t" x="62" y="134">BASE WORD</text>
+      <rect class="pv-o" x="40" y="236" width="96" height="30" rx="15"/><text class="pv-t" x="88" y="256" text-anchor="middle">LEET</text>
+      <rect class="pv-o pv-fill" x="146" y="236" width="104" height="30" rx="15"/><text class="pv-t" x="198" y="256" text-anchor="middle">YEARS</text>
+      <rect class="pv-o" x="40" y="276" width="110" height="30" rx="15"/><text class="pv-t" x="95" y="296" text-anchor="middle">SYMBOLS</text>
+      <path class="pv-l pv-d" d="M250 178 C290 178 290 165 330 165"/>
+    </g>
+    <g class="pv-r">
+      <text class="pv-t" x="330" y="134">VARIATIONS</text>
+      ${rows}
+      <rect class="pv-o pv-fill" x="500" y="60" width="100" height="40" rx="20"/><text class="pv-t" x="550" y="85" text-anchor="middle">.TXT</text>
+    </g>`;
     }
     return head + b + "</svg>";
   }
@@ -954,9 +1101,9 @@
   // ../../home/claude/repo/js/pages/home.js
   function pageHome() {
     const verbs = [
-      ["Build", "cyan", "web apps with HTML, CSS, JavaScript, Python, Django, Flask, Node.js and Express.", -1],
-      ["Experiment", "violet", "with AI, including MISA, a rule-based and AI-powered chatbot built in Python.", 1],
-      ["Explore", "green", "cybersecurity as a B.Tech specialization, with AppSec, cloud and network security certifications.", -1]
+      ["Build", "cyan", "security tools for the browser, like a password vault encrypted with AES-256-GCM and a breach checker.", -1],
+      ["Experiment", "violet", "with AI and ML: a phishing URL detector trained on 400,000+ URLs and a RAG chatbot that cites its sources.", 1],
+      ["Explore", "green", "cybersecurity as my B.Tech specialization, through two internships, SecOps Group certifications and job simulations.", -1]
     ].map(([w, a, t, d]) => `
     <div class="verb" data-accent="${a}">
       <div class="verb__word" data-reveal="line"><span class="par" data-px="${d}"><span class="rv">${w}</span></span></div>
@@ -974,14 +1121,14 @@
     return `
   <section class="hero">
     <div class="wrap">
-      <p class="hero__label mono" data-reveal="fade"><span class="dot"></span>WEB DEVELOPER \u2022 AI \u2022 CYBERSECURITY</p>
+      <p class="hero__label mono" data-reveal="fade"><span class="dot"></span>CYBERSECURITY \u2022 AI \u2022 WEB</p>
       <h1 class="hero__name" aria-label="${SITE.name}">
         <span class="nm" data-reveal="chars" data-base="0" aria-hidden="true">Rishabh</span>
         <span class="nm" data-reveal="chars" data-base="7" aria-hidden="true">Prajapati</span>
       </h1>
       <div class="hero__row">
         <div>
-          <p class="hero__lead" data-reveal="words">I build web apps, experiment with AI, and explore cybersecurity.</p>
+          <p class="hero__lead" data-reveal="words">I build security tools, experiment with AI, and ship them to the web.</p>
           <p class="hero__role mono" aria-hidden="true" data-reveal="fade" style="--d:400ms"><span id="role"></span><i class="caret"></i></p>
         </div>
         <div class="hero__cta" data-reveal="fade" style="--d:500ms">
@@ -990,7 +1137,7 @@
         </div>
       </div>
       <div class="hero__foot" data-reveal="fade" style="--d:700ms">
-        <p class="mono">B.Tech Computer Science student, specializing in Cybersecurity</p>
+        <p class="mono">B.Tech CSE (Cybersecurity) at LIET, Greater Noida, 2025 to 2029</p>
         <span class="scroll-cue" aria-hidden="true">Scroll<i></i></span>
       </div>
     </div>
@@ -1006,7 +1153,7 @@
     ${rows}
   </section>
 
-  <section class="marq" aria-label="Contributions and courses">
+  <section class="marq" aria-label="Internships and contributions">
     <div class="marq__track">${marq}${marq.replace(/<span class="marq__i">/g, '<span class="marq__i" aria-hidden="true">')}${marq.replace(/<span class="marq__i">/g, '<span class="marq__i" aria-hidden="true">')}${marq.replace(/<span class="marq__i">/g, '<span class="marq__i" aria-hidden="true">')}</div>
   </section>
 
@@ -1360,22 +1507,22 @@
   // ../../home/claude/repo/js/pages/about.js
   function pageAbout() {
     const trio = [
-      ["cyan", "Web development", "HTML, CSS and JavaScript, with Python, Django, Flask, Node.js and Express. I build responsive, practical web projects.", "Build"],
-      ["violet", "Artificial intelligence", "Experiments with AI, including MISA, a rule-based and AI-powered chatbot built in Python.", "Experiment"],
-      ["green", "Cybersecurity", "A B.Tech specialization in Cybersecurity, applying secure-by-design principles to my work.", "Explore"]
+      ["cyan", "Web development", "JavaScript, HTML and CSS for browser tools, plus React, TypeScript and Three.js on BlueNexus. Everything I build ships with a live demo.", "Build"],
+      ["violet", "AI and machine learning", "Python, scikit-learn and the Gemini API: a phishing URL classifier at about 91% accuracy and a RAG chatbot grounded in real documents.", "Experiment"],
+      ["green", "Cybersecurity", "My B.Tech specialization. Applied cryptography, phishing detection and IAM, backed by two internships and SecOps Group certifications.", "Explore"]
     ].map(([a, h, t, k]) => `
     <article class="trio__c" data-tilt data-accent="${a}" style="--c-rgb:var(--${a}-rgb)">
       <span class="trio__k mono">${k}</span>
       <div><h3>${h}</h3><p style="margin-top:1rem">${t}</p></div>
     </article>`).join("");
     return `
-  ${pageHead("About", "Passionate developer focused on web apps, AI experiments and cybersecurity.")}
+  ${pageHead("About", "Cybersecurity student who builds security tools, AI experiments and web apps.")}
 
   <section class="split wrap" data-reveal="rule">
     <h2 class="h2" data-reveal="words">Who I am</h2>
     <div class="prose">
-      <p data-reveal="fade">Enthusiastic B.Tech Computer Science student specializing in Cybersecurity. I enjoy practical projects in web development and AI, applying secure-by-design principles to my work.</p>
-      <p data-reveal="fade" style="--d:120ms">I'm interested in web development, artificial intelligence and software engineering. I enjoy building practical projects, learning new technologies, and applying security-minded practices to software development.</p>
+      <p data-reveal="fade">I'm a B.Tech Computer Science student at Lloyd Institute of Engineering & Technology (LIET), Greater Noida, specializing in Cybersecurity. I'm passionate about cyber threats and making software more secure.</p>
+      <p data-reveal="fade" style="--d:120ms">I learn by building. So far that means a phishing detector, a client-side password vault, a breach checker, a RAG chatbot for my college and a Smart India Hackathon project. I'm growing my skills in network security, ethical hacking and threat analysis, and I'm keen to contribute to real-world projects.</p>
     </div>
   </section>
 
@@ -1387,10 +1534,10 @@
   <section class="split wrap" data-reveal="rule">
     <h2 class="h2" data-reveal="words">How I work</h2>
     <div class="lines">
-      <p data-reveal="fade">Build practical projects.</p>
-      <p data-reveal="fade">Keep learning new technologies.</p>
-      <p data-reveal="fade">Apply secure-by-design principles.</p>
-      <p data-reveal="fade">Think critically and keep strong work habits.</p>
+      <p data-reveal="fade">Build practical tools and ship them live.</p>
+      <p data-reveal="fade">Keep secrets on the client and data private.</p>
+      <p data-reveal="fade">Ground AI answers in real sources.</p>
+      <p data-reveal="fade">Keep learning through internships, simulations and open source.</p>
     </div>
   </section>
 
@@ -1398,12 +1545,16 @@
     <h2 class="h2" data-reveal="words">Education</h2>
     <div>
       <div class="edu__row" data-reveal="fade">
-        <div><p class="edu__t">B.Tech, Computer Science</p><p class="edu__m" style="margin-top:.4rem">Specializing in Cybersecurity</p></div>
-        <p class="edu__m">Currently studying</p>
+        <div><p class="edu__t">B.Tech, Computer Science & Engineering (Cybersecurity)</p><p class="edu__m" style="margin-top:.4rem">Lloyd Institute of Engineering & Technology (LIET), Greater Noida</p></div>
+        <p class="edu__m">2025 to 2029</p>
       </div>
       <div class="edu__row" data-reveal="fade">
-        <div><p class="edu__t">Doon Bharti Public School (CBSE)</p><p class="edu__m" style="margin-top:.4rem">Science stream</p></div>
-        <p class="edu__m">Developed strong critical thinking and work habits.</p>
+        <div><p class="edu__t">Class XII, CBSE (Science)</p><p class="edu__m" style="margin-top:.4rem">Doon Bharti Public School, Faridabad, Haryana</p></div>
+        <p class="edu__m">2024 to 2025</p>
+      </div>
+      <div class="edu__row" data-reveal="fade">
+        <div><p class="edu__t">Class X, CBSE</p><p class="edu__m" style="margin-top:.4rem">Doon Bharti Public School, Faridabad, Haryana</p></div>
+        <p class="edu__m">2022 to 2023</p>
       </div>
     </div>
   </section>
@@ -1419,7 +1570,7 @@
       <h2 class="h2" id="idH" style="margin-bottom:1.4rem" data-reveal="words">Where web, AI and security meet</h2>
       <div class="swap" id="orbSwap" aria-live="polite">
         <h3 id="orbTitle">Three areas, one workflow</h3>
-        <p id="orbText">I apply secure-by-design principles across my web and AI projects.</p>
+        <p id="orbText">Most of my projects sit where these meet: security tools built for the web, and AI used to catch threats.</p>
       </div>
       <p class="orbit__hint mono">Hover, focus or tap a node.</p>
     </div>
@@ -1483,8 +1634,8 @@
     <aside class="skpanel" id="skpanel">
       <span class="mono" id="skGroup">Ecosystem</span>
       <div class="swap" id="skSwap" aria-live="polite">
-        <h2 id="skName">Six areas, one toolkit</h2>
-        <p id="skDesc">Front end, Python and back end, AI and security. Hover a node to see where each one shows up in my work.</p>
+        <h2 id="skName">Four areas, one toolkit</h2>
+        <p id="skDesc">Web, languages and tools, AI and ML, and security. Hover a node to see where each one shows up in my work.</p>
       </div>
       <div class="chips" role="group" aria-label="Filter by area">${chips}</div>
     </aside>
@@ -1560,7 +1711,7 @@
       <div class="proj__vis" data-tilt-t>${preview(p.slug)}</div>
     </article>`).join("");
     return `
-  ${pageHead("Projects", "A selection of projects showcasing web development and AI experiments.")}
+  ${pageHead("Projects", "Security tools, AI experiments and web builds. Every one has a live demo and public source code.")}
   <section class="wrap projs" aria-label="Projects">${cards}</section>
   ${nextOf("projects")}`;
   }
@@ -1622,8 +1773,8 @@
       </div>
     </div>`).join("");
     return `
-  ${pageHead("Certifications", "Programs, courses and credentials I have completed.")}
-  <section class="wrap" style="margin-top:clamp(2.4rem,6vw,5rem)" aria-label="Contributions and courses">
+  ${pageHead("Certifications", "Internships, open-source programs, certifications and job simulations.")}
+  <section class="wrap" style="margin-top:clamp(2.4rem,6vw,5rem)" aria-label="Internships and contributions">
     ${feat}
   </section>
   <section class="wrap arch" aria-labelledby="archH">
@@ -1637,35 +1788,40 @@
   function pageJourney() {
     const step = (b, s) => `<div class="step" data-reveal="fade"><b>${esc(b)}</b>${s ? `<span>${esc(s)}</span>` : ""}</div>`;
     return `
-  ${pageHead("Journey", "My experience so far is learning-led: courses, open-source programs, simulations and a virtual internship.")}
+  ${pageHead("Journey", "From school to internships: open source, certifications, a hackathon and two cybersecurity internships.")}
   <section class="wrap" style="margin-top:clamp(2.4rem,6vw,5rem)">
     <div class="phase" data-reveal="rule">
       <div><h2 class="phase__k">School</h2><p class="phase__sub">Where the foundations started.</p></div>
-      <div>${step("Doon Bharti Public School (CBSE)", "Science stream. Developed strong critical thinking and work habits.")}</div>
-    </div>
-    <div class="phase" data-reveal="rule">
-      <div><h2 class="phase__k">2025</h2><p class="phase__sub">Learning, contributing, certifying.</p></div>
       <div>
-        ${step("Web Development, Apna College", "2025")}
-        ${step("Tech Contributor, GirlScript Summer of Code (GSSoC)", "2025")}
-        ${step("Super Contributor, Hacktoberfest", "2025")}
-        ${step("AI Appreciate and AI Aware", "31 Jul 2025")}
-        ${step("Certified AppSec, Cloud Security (AWS) and Network Security Practitioner", "15 Oct 2025")}
+        ${step("Class X, CBSE, Doon Bharti Public School, Faridabad", "2022 to 2023")}
+        ${step("Class XII, CBSE (Science), Doon Bharti Public School, Faridabad", "2024 to 2025")}
       </div>
     </div>
     <div class="phase" data-reveal="rule">
-      <div><h2 class="phase__k">2026</h2><p class="phase__sub">Applying it in simulations and an internship.</p></div>
+      <div><h2 class="phase__k">2025</h2><p class="phase__sub">Starting B.Tech, contributing, certifying.</p></div>
       <div>
-        <div class="hl" data-reveal="fade"><span class="mono muted">Experience</span><b>Virtual Internship</b><span>THIRANEX, 2026</span></div>
-        ${step("Cybersecurity Analyst, EY Technology Risk, and Robotics and Controls job simulations", "04 Jun 2026")}
-        ${step("MongoDB Basics", "08 Aug 2026")}
-        ${step("Ethical Hacking by Unstop", "13 Aug 2026")}
+        ${step("Started B.Tech CSE (Cybersecurity) at LIET, Greater Noida", "2025")}
+        ${step("Tech Contributor, GirlScript Summer of Code (GSSoC)", "2025")}
+        ${step("AI Appreciate and AI Aware", "Jul 2025")}
+        ${step("Super Contributor, Hacktoberfest (DigitalOcean)", "Oct 2025")}
+        ${step("Certified AppSec, Network Security and Cloud Security (AWS) Practitioner, The SecOps Group", "Oct 2025")}
+      </div>
+    </div>
+    <div class="phase" data-reveal="rule">
+      <div><h2 class="phase__k">2026</h2><p class="phase__sub">Hackathon, simulations and internships.</p></div>
+      <div>
+        ${step("BlueNexus, Smart India Hackathon 2026 (team)", "Built the 3D frontend and helped on the FastAPI backend")}
+        ${step("Job simulations: Tata (IAM), Mastercard (Phishing), Deloitte (Cyber) and EY (Technology Risk)", "Jun to Jul 2026")}
+        <div class="hl" data-reveal="fade"><span class="mono muted">Internship</span><b>Cyber Security Analyst Intern</b><span>Thiranex, remote, 03 Jul to 02 Aug 2026</span></div>
+        <div class="hl" data-reveal="fade"><span class="mono muted">Internship</span><b>Ethical Hacking & Cybersecurity Intern</b><span>VaultofCodes, remote, from 25 Jul 2026, via the AICTE National Internship Portal</span></div>
+        ${step("Ethical Hacking with AI, Unstop", "Aug 2026")}
+        ${step("MongoDB Basics", "Aug 2026")}
       </div>
     </div>
     <div class="phase" data-reveal="rule">
       <div><h2 class="phase__k">Now</h2><p class="phase__sub">Studying and building.</p></div>
       <div>
-        ${step("B.Tech, Computer Science", "Specializing in Cybersecurity")}
+        ${step("B.Tech, Computer Science & Engineering", "Specializing in Cybersecurity, LIET, 2025 to 2029")}
         <div class="built" data-reveal="fade">${PROJECTS.map((p) => `<a href="#/projects/${p.slug}" data-cursor="link">${esc(p.title)}</a>`).join("")}</div>
       </div>
     </div>
@@ -1708,7 +1864,7 @@
   var noop = () => {
   };
   var PAGES = {
-    "/": { key: "home", title: "Rishabh Prajapati: Web Developer, AI, Cybersecurity", label: "Home", render: pageHome, init: initHome, accent: "cyan" },
+    "/": { key: "home", title: "Rishabh Prajapati: Cybersecurity, AI and Web", label: "Home", render: pageHome, init: initHome, accent: "cyan" },
     "/about": { key: "about", title: "About", label: "About", render: pageAbout, init: initAbout, accent: "blue" },
     "/skills": { key: "skills", title: "Skills", label: "Skills", render: pageSkills, init: initSkills, accent: "cyan" },
     "/projects": { key: "projects", title: "Projects", label: "Projects", render: pageProjects, init: noop, accent: "violet" },
